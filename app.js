@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+  jQuery("time.timeago").timeago();
+
   var $body = $('body');
   var $tweetButton = $('#newTweetButton');
   var $allTweets = $('.allTweets');
@@ -31,7 +33,7 @@ $(document).ready(function(){
       $time.addClass("timeStamp");
       $username.text('@' + tweet.user);
       $tweetBody.text(tweet.message);
-      $time.text('Created at: ' + tweet.created_at)
+      $time.text(jQuery.timeago(tweet.created_at));
       $username.appendTo($tweet);
       $tweetBody.appendTo($tweet);
       $time.appendTo($tweet);
@@ -66,7 +68,7 @@ $(document).ready(function(){
       $time1.addClass("timeStamp");
       $username1.text('@' + streams.users[user][i].user);
       $tweetBody1.text(streams.users[user][i].message);
-      $time1.text('Created at: ' + streams.users[user][i].created_at);
+      $time1.text(jQuery.timeago(streams.users[user][i].created_at));
 
       $username1.appendTo($tweet1);
       $tweetBody1.appendTo($tweet1);
