@@ -21,14 +21,18 @@ $(document).ready(function(){
       var $tweet = $('<div></div>');
       var $username = $('<div></div>');
       var $tweetBody = $('<div></div>');
+      var $time = $('<div></div>');
 
       $tweet.addClass("tweets");
       $username.addClass("user");
       $tweetBody.addClass("tweetBod");
+      $time.addClass("timeStamp");
       $username.text('@' + tweet.user);
       $tweetBody.text(tweet.message);
+      $time.text('Created at: ' + tweet.created_at)
       $username.appendTo($tweet);
       $tweetBody.appendTo($tweet);
+      $time.appendTo($tweet);
 
       $tweet.prependTo($allTweets);
       $($username).on('click', () => clickUser(event.target));
