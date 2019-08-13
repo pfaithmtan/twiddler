@@ -52,6 +52,12 @@ body {
     padding: 2px 2px;
 }
 
+.userTweets {
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 2px 2px;
+}
+
 .tweets {
     background-color: rgb(252, 250, 138);
     border-radius: 15px;
@@ -62,6 +68,7 @@ body {
 .user {
     font-size: 20px;
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .tweetBod {
